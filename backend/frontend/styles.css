@@ -1,0 +1,45 @@
+/* frontend/styles.css */
+/* Style the achievement container */
+.achievement-container {
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.achievement-container.completed {
+	background-color: #beffda;
+	border: 1px solid #39ff4d;
+}
+
+/* Style the achievement icon */
+.achievement-icon {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	font-size: xx-large;
+}
+
+/* Style the achievement details */
+.achievement-details {
+	flex: 1;
+}
+
+/* Style the achievement title */
+.achievement-title {
+	font-weight: bold;
+}
+
+/* Style the achievement description */
+.achievement-description {
+	color: #777;
+}
+
+/* Style the completion date placeholder */
+.completion-date {
+	color: #777;
+	font-style: italic;
+}
