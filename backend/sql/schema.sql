@@ -24,6 +24,7 @@ CREATE TABLE Achievements(
     description VARCHAR,
     emoji VARCHAR,
     tag VARCHAR,
+    score INT,
     FOREIGN KEY (parent_achievement_id) REFERENCES Achievements(id), 
     FOREIGN KEY (collection_id) REFERENCES Collections(id)
 );
@@ -33,7 +34,7 @@ CREATE TABLE UserAchievments(
     id INT PRIMARY KEY,
     FOREIGN KEY (acheivement_id) REFERENCES Achievements(id),
     FOREIGN KEY (collection_id) REFERENCES Collections(id),
-    collection_date DATE
+    completion_date DATE
 );
 
 DROP TABLE UserCollections;
