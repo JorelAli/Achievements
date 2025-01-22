@@ -1,12 +1,14 @@
-// backend/app.js
-const express = require('express');
-const cors = require('cors');
-const path = require('path'); // Add path module
-const bodyParser = require('body-parser');
-const userRoutes = require('./routes/userRoutes');
-const collectionRoutes = require('./routes/collectionRoutes'); // Import collection routes
+import express from 'express';
+import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import bodyParser from 'body-parser';
+import userRoutes from './routes/userRoutes.mjs';
+import collectionRoutes from './routes/collectionRoutes.mjs';
 
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(cors());
 app.use(bodyParser.json());

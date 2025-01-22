@@ -1,7 +1,7 @@
-// backend/routes/userRoutes.js
-const express = require('express');
+import express from 'express';
+import userModel from '../models/user.mjs';
+
 const router = express.Router();
-const userModel = require('../models/user');
 
 // Create a new user
 router.get('/', (req, res) => {
@@ -14,4 +14,4 @@ router.get('/', (req, res) => {
   });
 });
 
-module.exports = router;
+export default router;

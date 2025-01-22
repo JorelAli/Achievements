@@ -1,5 +1,4 @@
-// backend/models/user.js
-const db = require('../db');
+import db from '../db.mjs';
 
 // Create a users table
 db.serialize(() => {
@@ -11,7 +10,7 @@ db.serialize(() => {
 });
 
 // Define user model functions
-module.exports = {
+export default {
   create: (userData, callback) => {
     const { username, email } = userData;
     db.run('INSERT INTO users (username, email) VALUES (?, ?)', [username, email], (err) => {

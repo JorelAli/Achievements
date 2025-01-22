@@ -1,5 +1,5 @@
-// backend/routes/collectionRoutes.js
-const express = require('express');
+import express from 'express';
+
 const router = express.Router();
 
 // Sample collections data (replace with your actual data retrieval logic)
@@ -11,6 +11,7 @@ const collectionsData = [
 
 // Sample data for achievements (replace with your actual data retrieval logic)
 const achievementsData = {
+	
 	'collection1': [
 		{
 			title: 'Just walk it off',
@@ -283,4 +284,4 @@ router.get('/:collection_name/achievements', (req, res) => {
 
 // Add routes for creating collections, updating, or deleting them as needed
 
-module.exports = router;
+export default router;
